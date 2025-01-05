@@ -1,1 +1,1 @@
-# gitops demo
+# gitops demo commit status check
