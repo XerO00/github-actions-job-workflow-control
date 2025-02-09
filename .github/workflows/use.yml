@@ -34,4 +34,4 @@ jobs:
     needs: build
     uses: ./.github/workflows/reusable.yml
     with:
-      name: dist-files
+      artifact-name: dist-files
