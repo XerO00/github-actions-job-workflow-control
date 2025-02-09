@@ -35,4 +35,3 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       name: dist-files
-      path: dist
