@@ -1,9 +1,10 @@
 name: Reusable
 on: 
   workflow_call:
-    
-    outputs:
-      result:
-        description: The result of the deployment operation
-        value: ${{ jobs.deploy.outputs.outcome }}
-    # secrets:
+
+jobs:
+  deploy:    
+    runs-on: ubuntu-latest
+    steps:
+      - name: output
+        run: echo "deploying"
