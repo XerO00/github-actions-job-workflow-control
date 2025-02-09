@@ -16,6 +16,6 @@ jobs:
       - name: output
         run: echo "deploying"
       - name: Get Code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.artifact-name }}
