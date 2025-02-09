@@ -1,6 +1,13 @@
 name: Reusable
 on: 
   workflow_call:
+    inputs:
+      artifact-name:
+        description: The name of the deployable artifact files
+        required: false
+        default: dist
+        type: string    
+
 
 jobs:
   deploy:    
@@ -8,3 +15,7 @@ jobs:
     steps:
       - name: output
         run: echo "deploying"
+      - name: Get Code
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact-name }}
